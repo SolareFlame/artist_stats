@@ -1,0 +1,23 @@
+{
+  "name": "adostats",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "axios": "^1.8.1",
+    "dotenv": "^16.4.7",
+    "mysql2": "^3.12.0",
+    "spotify-web-api-node": "^5.0.2",
+    "typeorm": "^0.3.21"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.8",
+    "@types/spotify-web-api-node": "^5.0.11",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  },
+  "private": true
+}
