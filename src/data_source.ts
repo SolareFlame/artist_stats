@@ -3,6 +3,10 @@ import { DataSource } from "typeorm";
 import 'dotenv/config';
 import { SpotifyArtistMetrics } from "./entities/SpotifyArtistMetric";
 import { SpotifyTrackMetrics } from "./entities/SpotifyTrackMetric";
+//import { DeezerArtistMetrics } from "./entities/DeezerArtistMetric";
+//import { DeezerTrackMetrics } from "./entities/DeezerTrackMetric";
+import {YoutubeArtistMetrics} from "./entities/YoutubeArtistMetric";
+import {YoutubeTrackMetrics} from "./entities/YoutubeTrackMetric";
 
 export const AppDataSource = new DataSource({
     type: "mysql",
@@ -16,5 +20,9 @@ export const AppDataSource = new DataSource({
     entities: [
         SpotifyArtistMetrics,
         SpotifyTrackMetrics,
+        //DeezerArtistMetrics,
+        //DeezerTrackMetrics,
+        YoutubeArtistMetrics,
+        YoutubeTrackMetrics,
     ],
 });
