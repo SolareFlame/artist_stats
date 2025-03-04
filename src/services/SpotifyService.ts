@@ -1,8 +1,8 @@
 import 'dotenv/config';
 import SpotifyWebApi from 'spotify-web-api-node';
 
-import { SpotifyArtistMetrics } from "../entities/SpotifyArtistMetric";
-import { SpotifyTrackMetrics } from "../entities/SpotifyTrackMetric";
+import { SpotifyArtistMetrics } from "../entities/SpotifyArtistMetrics";
+import { SpotifyTrackMetrics } from "../entities/SpotifyTrackMetrics";
 
 const spotify_api = new SpotifyWebApi({
     clientId: process.env.SPOTIFY_CLIENT_ID,

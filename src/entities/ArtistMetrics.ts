@@ -6,7 +6,7 @@ import {
     CreateDateColumn,
     BaseEntity
 } from "typeorm";
-import {TrackMetrics} from "./TrackMetric";
+import {TrackMetrics} from "./TrackMetrics";
 
 /**
  * @class ArtistMetrics

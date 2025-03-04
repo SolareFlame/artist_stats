@@ -1,9 +1,11 @@
 import {
     Entity,
-    Column,
+    Column, OneToMany,
 } from "typeorm";
 
-import {ArtistMetrics} from "./ArtistMetric";
+import {ArtistMetrics} from "./ArtistMetrics";
+import {YoutubeTrackMetrics} from "./YoutubeTrackMetrics";
+
 
 @Entity()
 export class YoutubeArtistMetrics extends ArtistMetrics {
@@ -15,4 +17,7 @@ export class YoutubeArtistMetrics extends ArtistMetrics {
 
     @Column({ type: "int" })
     video_count!: number;
+
+    @OneToMany(() => YoutubeTrackMetrics, track => track.artistMetrics, { cascade: true })
+    tracks!: YoutubeTrackMetrics[];
 }

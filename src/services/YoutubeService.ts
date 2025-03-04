@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { YoutubeArtistMetrics } from "../entities/YoutubeArtistMetric";
-import { YoutubeTrackMetrics } from "../entities/YoutubeTrackMetric";
+import { YoutubeArtistMetrics } from "../entities/YoutubeArtistMetrics";
+import { YoutubeTrackMetrics } from "../entities/YoutubeTrackMetrics";
 
 export class YoutubeService {
     async insertDailyMetrics(artistName: string): Promise<void> {
