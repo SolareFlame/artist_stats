@@ -1,29 +1,15 @@
 import {
     Entity,
-    PrimaryGeneratedColumn,
     Column,
-    ManyToOne,
-    BaseEntity, PrimaryColumn
 } from "typeorm";
-import {SpotifyArtistMetrics} from "./SpotifyArtistMetric";
+
+import {TrackMetrics} from "./TrackMetric";
 
 @Entity()
-export class SpotifyTrackMetrics extends BaseEntity {
-    @PrimaryGeneratedColumn()
-    id!: number;
-
-    @Column()
-    track_id!: string;
-
-    @Column()
-    track_name!: string;
-
+export class SpotifyTrackMetrics extends TrackMetrics {
     @Column()
     album!: string;
 
     @Column()
     popularity!: number;
-
-    @ManyToOne(() => SpotifyArtistMetrics, artistMetrics => artistMetrics.tracks)
-    artistMetrics!: SpotifyArtistMetrics;
 }

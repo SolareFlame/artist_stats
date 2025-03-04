@@ -29,7 +29,7 @@ export class SpotifyService {
         dailyArtist.artist_id = artist.id;
         dailyArtist.artist_name = artist.name;
         dailyArtist.artist_popularity = artist.popularity;
-        dailyArtist.followers = artist.followers.total;
+        dailyArtist.subscribers = artist.followers.total;
 
         await dailyArtist.save();
 
