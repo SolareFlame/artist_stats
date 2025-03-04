@@ -1,12 +1,12 @@
 import "reflect-metadata";
 import { DataSource } from "typeorm";
 import 'dotenv/config';
-import { SpotifyArtistMetrics } from "./entities/SpotifyArtistMetric";
-import { SpotifyTrackMetrics } from "./entities/SpotifyTrackMetric";
-//import { DeezerArtistMetrics } from "./entities/DeezerArtistMetric";
-//import { DeezerTrackMetrics } from "./entities/DeezerTrackMetric";
-import {YoutubeArtistMetrics} from "./entities/YoutubeArtistMetric";
-import {YoutubeTrackMetrics} from "./entities/YoutubeTrackMetric";
+import { SpotifyArtistMetrics } from "./entities/SpotifyArtistMetrics";
+import { SpotifyTrackMetrics } from "./entities/SpotifyTrackMetrics";
+import { DeezerArtistMetrics } from "./entities/DeezerArtistMetrics";
+import { DeezerTrackMetrics } from "./entities/DeezerTrackMetrics";
+import {YoutubeArtistMetrics} from "./entities/YoutubeArtistMetrics";
+import {YoutubeTrackMetrics} from "./entities/YoutubeTrackMetrics";
 
 export const AppDataSource = new DataSource({
     type: "mysql",
@@ -20,8 +20,8 @@ export const AppDataSource = new DataSource({
     entities: [
         SpotifyArtistMetrics,
         SpotifyTrackMetrics,
-        //DeezerArtistMetrics,
-        //DeezerTrackMetrics,
+        DeezerArtistMetrics,
+        DeezerTrackMetrics,
         YoutubeArtistMetrics,
         YoutubeTrackMetrics,
     ],
